@@ -34,10 +34,10 @@ cmp.setup({
 	    vim.fn["vsnip#anonymous"](args.body)
 	end
 	},
-    -- window = {
-	-- completion = cmp.config.window.bordered(),
+    window = {
+	completion = cmp.config.window.bordered(),
 	-- documentation = cmp.config.window.bordered()
-	-- },
+	},
     mapping = cmp.mapping.preset.insert({
 	["<Tab>"] = cmp.mapping.confirm({select = true})
 	}),
