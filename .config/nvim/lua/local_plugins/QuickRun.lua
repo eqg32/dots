@@ -13,7 +13,7 @@ local quickrun = require("nui.popup")({
     border = {
 	style = "rounded",
 	text = {
-	    top = "Quick Run",
+	    top = "[Quick Run]",
 	    top_align = "center",
 	},
     },
@@ -23,10 +23,11 @@ local quickrun = require("nui.popup")({
 })
 
 
+local chosen_file = vim.fn.expand("%:p")
 local commands = {
-    ["python"] = "pipenv run python " .. vim.fn.expand("%:p"),
-    ["cpp"] = "gcc " .. vim.fn.expand("%:p") .. " -lstdc++ && ./a.out && rm -rf a.out",
-    ["lua"] = "lua " .. vim.fn.expand("%:p"),
+    ["python"] = "pipenv run python " .. chosen_file,
+    ["cpp"] = "gcc " .. chosen_file .. " -lstdc++ && ./a.out && rm -rf a.out",
+    ["lua"] = "lua " .. chosen_file,
 }
 
 

@@ -13,7 +13,7 @@ local terminal = require("nui.popup")({
     border = {
 	style = "rounded",
 	text = {
-	    top = "Terminal",
+	    top = "[Terminal]",
 	    top_align = "center",
 	},
     },
