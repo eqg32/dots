@@ -15,19 +15,6 @@ vim.keymap.set({"n", "v", "i"}, "<PageDown>", "<Ignore>")
 
 -- plugin mappings
 
-vim.keymap.set({"n", "v"}, "<M-f>", "<cmd>ToggleTerm<cr>")
+vim.keymap.set({"n", "v"}, "<M-f>", "<cmd>TerminalToggle<cr>")
 vim.keymap.set({"n", "v"}, "<M-g>", "<cmd>NvimTreeToggle<cr>")
--- vim.keymap.set({"n", "v"}, "<M-q>", "<cmd>quitall<cr>")
--- vim.keymap.set({"n", "v"}, "<F2>", "<cmd>w<cr><cmd>Jaq<cr>")
-
--- removing mappings
-
--- vim.keymap.set({"n", "v"}, "q", "<Ignore>")
-
--- movement remappings
-
--- vim.keymap.set({"n", "v"}, "i", "k")
--- vim.keymap.set({"n", "v"}, "k", "j")
--- vim.keymap.set({"n", "v"}, "j", "h")
--- vim.keymap.set({"n", "v"}, "h", "i")
-
+vim.keymap.set({"n", "v"}, "<M-r>", "<cmd>QuickRun<cr>")
