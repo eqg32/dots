@@ -25,12 +25,22 @@ local terminal = require("nui.popup")({
 
 local initialised = false
 local opened = false
+local specific = {
+    ["python"] = "pipenv shell",
+}
 
 
 local function toggle()
+    local command = ""
+
     if not initialised then
+	if specific[vim.bo.filetype] then
+	    command = "terminal " .. specific[vim.bo.filetype]
+	    else
+		command = "terminal"
+	end
 	terminal:mount()
-	vim.cmd("terminal")
+	vim.cmd(command)
 	initialised = true
     end
 
