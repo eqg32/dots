@@ -33,6 +33,7 @@ local function toggle()
 	vim.cmd("terminal")
 	initialised = true
     end
+
     if opened then
 	terminal:hide()
 	opened = false
@@ -40,6 +41,7 @@ local function toggle()
 	    terminal:show()
 	    opened = true
     end
+
     terminal:on(
 	event.QuitPre,
 	function ()
@@ -54,8 +56,6 @@ end
 local function init()
     vim.api.nvim_create_user_command("TerminalToggle", toggle, {})
 end
-
-
 
 
 return init()

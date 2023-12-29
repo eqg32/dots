@@ -23,18 +23,26 @@ local quickrun = require("nui.popup")({
 })
 
 
-local chosen_file = vim.fn.expand("%:p")
+local executable = vim.fn.expand("%:p")
+local to_change = false
 local commands = {
-    ["python"] = "pipenv run python " .. chosen_file,
-    ["cpp"] = "gcc " .. chosen_file .. " -lstdc++ && ./a.out && rm -rf a.out",
-    ["lua"] = "lua " .. chosen_file,
+    ["python"] = "pipenv run python %s",
+    ["cpp"] = "gcc -lstdc++ %s && ./a.out && rm -rf a.out",
+    ["lua"] = "lua %s",
 }
 
 
 local function run()
-    local command = "terminal " .. commands[vim.bo.filetype]
+    local command = "terminal " .. string.format(commands[vim.bo.filetype], executable)
+    if to_change then
+	executable = vim.fn.expand("%:p")
+	to_change = false
+	command = "terminal " .. string.format(commands[vim.bo.filetype], executable)
+    end
+
     quickrun:mount()
     vim.cmd(command)
+
     quickrun:on(
 	event.QuitPre,
 	function ()
@@ -46,6 +54,13 @@ end
 
 local function init()
     vim.api.nvim_create_user_command("QuickRun", run, {})
+    vim.api.nvim_create_user_command(
+	"ChangeExecutable",
+	function ()
+	    to_change = true
+	end,
+	{}
+    )
 end
 
 
