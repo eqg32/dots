@@ -24,7 +24,7 @@ blue_palette = Palette(
 
 everforest = Palette(
         "3a464c",
-        "9da9a0",
+        "d3c6aa",
         "859289",
         )
 
