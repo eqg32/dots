@@ -28,8 +28,8 @@ class dectextbox(widget.TextBox):
 groupbox = widget.GroupBox(
         # parameters
         highlight_method="text",
-        fontsize=24,
-        spacing=10,
+        fontsize=20,
+        spacing=2,
         disable_drag=True,
 
         # colour things
