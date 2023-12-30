@@ -53,7 +53,7 @@ local function toggle()
     end
 
     terminal:on(
-	event.QuitPre,
+	{ event.QuitPre, event.TermLeave },
 	function ()
 	    terminal:unmount()
 	    initialised = false

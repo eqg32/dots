@@ -1,7 +1,7 @@
 require 'lualine'.setup {
   options = {
     icons_enabled = true,
-    theme = 'onenord',
+    theme = 'everforest',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
   },

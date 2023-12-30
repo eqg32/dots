@@ -44,7 +44,7 @@ local function run()
     vim.cmd(command)
 
     quickrun:on(
-	event.QuitPre,
+	{ event.QuitPre, event.TermLeave },
 	function ()
 	    quickrun:unmount()
 	end

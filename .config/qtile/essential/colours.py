@@ -22,4 +22,10 @@ blue_palette = Palette(
         )
 
 
-palette = blue_palette
+everforest = Palette(
+        "3a464c",
+        "9da9a0",
+        "859289",
+        )
+
+palette = everforest

@@ -4,18 +4,19 @@ from essential.colours import palette
 from essential import widgets
 
 
-mini_bar = Bar(
-        [
-            widgets.groupbox,
-            ],
-        36,
-        margin=[15, 1653, 0, 15],
-        border_width=8,
-        border_color=palette.inactive,
-        )
+# mini_bar = Bar(
+#         [
+#             widgets.groupbox,
+#             ],
+#         36,
+#         margin=[15, 1653, 0, 15],
+#         border_width=8,
+#         border_color=palette.inactive,
+#         )
 
 primary_bar = Bar(
         [
+            widgets.groupbox,
             widgets.prompt,
             widget.Spacer(),
             widgets.dectextbox(text="󰥻"),
@@ -30,7 +31,9 @@ primary_bar = Bar(
             widgets.clock,
             ],
         36,
-        margin=[-7, 0, 8, 0],
-        border_width=[8, 0, 0, 0],
+        # margin=[0, 0, 4, 0],
+        # border_width=[4, 0, 0, 0],
+        margin=[0, 12, 12, 12],
+        border_width=4,
         border_color=palette.inactive,
         )

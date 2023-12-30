@@ -6,7 +6,7 @@ from essential.screen import groups
 
 # some definitions
 mod = "mod4"
-terminal = guess_terminal()
+terminal = "kitty"
 
 # key definitions
 up = "k"

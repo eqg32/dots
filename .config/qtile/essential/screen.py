@@ -8,10 +8,10 @@ groups = [Group(workspace, label="") for workspace in "123qwe"]
 
 layouts = [
         layout.MonadTall(
-            margin=15,
+            margin=12,
 
             # borders
-            border_width=8,
+            border_width=4,
             border_focus=palette.active,
             border_normal=palette.inactive,
             ),
@@ -20,8 +20,8 @@ layouts = [
 screens = [
         Screen(
             bottom=bars.primary_bar,
-            top=bars.mini_bar,
-            wallpaper="~/.config/qtile/wallpapers/wallpaper_blue.png",
+            # top=bars.mini_bar,
+            wallpaper="~/.config/qtile/wallpapers/wallpaper.png",
             wallpaper_mode="fill",
             ),
         ]
