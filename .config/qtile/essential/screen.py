@@ -21,7 +21,7 @@ screens = [
         Screen(
             bottom=bars.primary_bar,
             # top=bars.mini_bar,
-            wallpaper="~/.config/qtile/wallpapers/wallpaper.png",
+            wallpaper="~/.config/qtile/wallpapers/executer.png",
             wallpaper_mode="fill",
             ),
         ]
